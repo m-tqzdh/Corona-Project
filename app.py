@@ -9,7 +9,7 @@ app = Flask(__name__, static_folder="statics")
 def crawl_info():
     # Step 1: Runing Spider
     Run_Spider.run_spider()
-
+    
     # Step 2 : Read Info 
     Info_dict = Read_DB.read_info()
     Coronavirus_Cases = Info_dict.get("Coronavirus_Cases")
@@ -34,5 +34,5 @@ def crawl_info():
         TotalRecovered=TotalRecovered, ActiveCases=ActiveCases, Serious_Critical=Serious_Critical, TotlaCase_in_1Mpop=TotlaCase_in_1Mpop,
         Plot_Src=Plot_Src
     )
-
+# Run app
 app.run(debug=True)
