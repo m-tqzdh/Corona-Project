@@ -4,7 +4,7 @@ import Read_DB
 import Draw_Plot
 
 app = Flask(__name__, static_folder="statics")
-
+ 
 @app.route("/")
 def crawl_info():
     # Step 1: Runing Spider
